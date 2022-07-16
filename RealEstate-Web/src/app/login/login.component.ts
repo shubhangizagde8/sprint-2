@@ -22,7 +22,7 @@ export class LoginComponent implements OnInit {
       if (res.isAdmin)
         this._router.navigate(['/#']);
       else
-        this._router.navigate(['/home']);
+        this._router.navigate(['/Property']);
     }, err => console.log(err));
   }
 
