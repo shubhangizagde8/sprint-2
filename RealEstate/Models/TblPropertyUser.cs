@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace RealEstate.Models
 {
-    public partial class TblProperty
+    public partial class TblPropertyUser
     {
         public int Id { get; set; }
         public string PropertyName { get; set; }

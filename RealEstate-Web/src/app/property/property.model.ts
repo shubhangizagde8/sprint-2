@@ -3,7 +3,8 @@ export class TblProperty{
     propertyName:string='';
     propertyDescription:string='';
     propertyImage:string='';
-    sellRent:string='';
-    propertyAdress:string='';
+    propertySize:string='';
+    propertylocation:string='';
     propertyPrice:number=0;
+    discount:number=0;
 }

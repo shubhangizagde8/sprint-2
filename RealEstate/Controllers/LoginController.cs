@@ -43,6 +43,9 @@ namespace RealEstate.Controllers
             login.UserName = registerViewModel.UserName;
             login.Password = registerViewModel.Password;
             login.Email= registerViewModel.Email;
+            login.MobileNumber = registerViewModel.MobileNumber;
+            login.IsVender = registerViewModel.IsVender;
+
             var token = iJWTMangerRepository.Authenicate(login, true);
             if (token.IsUserExits)
             {

@@ -4,12 +4,19 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { HomeComponent } from './home/home.component';
 import { PropertyComponent} from './property/property.component';
+import { OrderComponent} from './order/order.component';
+
 
 const routes: Routes = [
 
   {
     path: 'home',
     component: HomeComponent
+  },
+  
+  {
+    path: 'order',
+    component: OrderComponent
   },
   
   {

@@ -20,9 +20,9 @@ export class PropertyComponent  {
       propertyName:this.TblPropertyModel.propertyName,
       propertyDescription:this.TblPropertyModel.propertyDescription,
       propertyImage:this.TblPropertyModel.propertyImage,
-      sellRent:this.TblPropertyModel.sellRent,
-      propertyAdress:this.TblPropertyModel.propertyAdress,
-      propertyPrice:Number(this.TblPropertyModel.propertyPrice),
+      propertySize:this.TblPropertyModel.propertySize,
+      propertylocation:this.TblPropertyModel.propertylocation,
+      discount:Number(this.TblPropertyModel.discount),
  }
  this.httpc.post("https://localhost:44393/api/Property",propertydto).subscribe(res=>this.PostSuccess(res),res=>this.PostError(res));
     this.TblPropertyModel = new TblProperty();

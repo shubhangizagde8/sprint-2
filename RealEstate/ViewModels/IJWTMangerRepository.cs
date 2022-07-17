@@ -15,7 +15,7 @@ namespace RealEstate.ViewModels
     public class JWTManagerRepository : IJWTMangerRepository
     {
         Dictionary<string, string> UserRecords;
-
+       
         private readonly IConfiguration configuration;
         private readonly RealEstateDbContext db;
 
@@ -27,6 +27,7 @@ namespace RealEstate.ViewModels
         public Tokens Authenicate(LoginViewModel registerViewModel, bool IsRegister)
         {
             var _isAdmin = false;
+            var _isVender = false;
             var _isUserExists = false;
             if (IsRegister)
             {
@@ -35,12 +36,20 @@ namespace RealEstate.ViewModels
                     _isUserExists = true;
                     return new Tokens { IsUserExits = _isUserExists };
                 }
+                
                 TblLogin tblLogin = new TblLogin();
                 tblLogin.UserName = registerViewModel.UserName;
                 tblLogin.Password = registerViewModel.Password;
                 tblLogin.Email = registerViewModel.Email;
+                tblLogin.MobileNumber = registerViewModel.MobileNumber;
+                tblLogin.IsVender = registerViewModel.IsVender;
                 db.TblLogins.Add(tblLogin);
                 db.SaveChanges();
+                
+            }
+            else if (db.TblLogins.Any(x => x.UserName == registerViewModel.UserName && x.Password == registerViewModel.Password))
+            {
+                _isVender = db.TblLogins.Any(x => x.UserName == registerViewModel.UserName && x.Password == registerViewModel.Password && x.IsVender == 1);
             }
             else
             {
@@ -64,7 +73,7 @@ namespace RealEstate.ViewModels
                 SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(tokenkey), SecurityAlgorithms.HmacSha256Signature)
             };
             var token = tokenHandler.CreateToken(tokenDescriptor);
-            return new Tokens { Token = tokenHandler.WriteToken(token), IsAdmin = _isAdmin, IsUserExits = _isUserExists };
+            return new Tokens { Token = tokenHandler.WriteToken(token), IsAdmin = _isAdmin, IsUserExits = _isUserExists, IsVender = _isVender, };
         }
     }
 }

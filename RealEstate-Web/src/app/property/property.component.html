@@ -19,21 +19,27 @@
     </tr>
 
     <tr>
-        <td>sell / Rent</td>
+        <td>size of Property</td>
         <td>
-            <input [(ngModel)]="TblPropertyModel.sellRent" type="text">
+            <input [(ngModel)]="TblPropertyModel.propertySize" type="text">
         </td>
     </tr>
     <tr>
         <td>property Adress</td>
         <td>
-            <input [(ngModel)]="TblPropertyModel.propertyAdress" type="text">
+            <input [(ngModel)]="TblPropertyModel.propertylocation" type="text">
         </td>
     </tr>
     <tr>
         <td>Property Price</td>
         <td>
             <input [(ngModel)]="TblPropertyModel.propertyPrice" type="text">
+        </td>
+    </tr>
+    <tr>
+        <td>Discount</td>
+        <td>
+            <input [(ngModel)]="TblPropertyModel.discount" type="text">
         </td>
     </tr>
      <input type="button" (click)="getData()" value="getData"/>
@@ -46,9 +52,10 @@
         <td>Type of property</td>
         <td>property Description</td>
         <td>property Image Name</td>
-        <td>property sell / Rent</td>
+        <td>size of Property</td>
         <td> property Adress</td>
         <td> Property Price</td>
+        <td> Discount</td>
         <td>Actions</td>
     </tr>
     <tr *ngFor="let item of TblPropertyModels">
@@ -59,11 +66,13 @@
         </td>
         <td> {{item.propertyImage}}
         </td>
-        <td> {{item.sellRent}}
+        <td> {{item.propertySize}}
         </td>
-        <td> {{item.propertyAdress}}
+        <td> {{item.propertylocation}}
         </td>
         <td> {{item.propertyPrice}}
+        </td>
+        <td> {{item.discount}}
         </td>
         <td>
             <input type="button" value="Edit" (click)="EditCustomer(item)" />
