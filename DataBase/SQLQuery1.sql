@@ -11,6 +11,8 @@
 					   isVender int,);
 
 select *from TblLogin;
+insert into TblLogin values('sham','sham@gmail.com','sham',37858,1,0);
+
 
 drop table  TblLogin;
 
@@ -24,7 +26,9 @@ create table TblProperty(Id int primary key identity(1,1),
 					   Discount int);
 
 
-create table TblPropertyUser(Id int primary key identity(1,1),
+create table TblPropertyvender(Id int primary key identity(1,1),
+                       UserName varchar(200),
+					   Email varchar(200) unique,
                        PropertyName varchar(200)  not null,
 					   PropertyDescription varchar(500),
 					   PropertyImage varchar(100) not null,

@@ -26,7 +26,7 @@ export class LoginComponent implements OnInit {
       else if (res.isVender)
              this._router.navigate(['/Property']);    
       else
-        this._router.navigate(['/#']);
+        this._router.navigate(['/home']);
     }, err => console.log(err));
   }
 

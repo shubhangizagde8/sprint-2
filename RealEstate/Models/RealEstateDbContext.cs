@@ -38,10 +38,10 @@ namespace RealEstate.Models
             {
                 entity.ToTable("TblLogin");
 
-                entity.HasIndex(e => e.Email, "UQ__TblLogin__A9D10534490B50A6")
+                entity.HasIndex(e => e.Email, "UQ__TblLogin__A9D10534A64E5921")
                     .IsUnique();
 
-                entity.HasIndex(e => e.UserName, "UQ__TblLogin__C9F28456AD4AC00B")
+                entity.HasIndex(e => e.UserName, "UQ__TblLogin__C9F28456C1D2ED48")
                     .IsUnique();
 
                 entity.Property(e => e.Email)

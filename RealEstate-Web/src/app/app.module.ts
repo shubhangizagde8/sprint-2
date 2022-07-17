@@ -7,10 +7,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
-import { HomeComponent } from './home/home.component';
+import { HomeComponent } from './userhome/home.component';
 import { AuthService } from './services/auth.service';
 import { PropertyComponent } from './property/property.component';
 import { OrderComponent } from './order/order.component';
+import { Home1Component } from './home1/home1.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { OrderComponent } from './order/order.component';
     RegisterComponent,
     HomeComponent,
     PropertyComponent,
-    OrderComponent
+    OrderComponent,
+    Home1Component
   ],
   imports: [
     BrowserModule,
