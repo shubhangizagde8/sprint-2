@@ -22,6 +22,7 @@ export class PropertyComponent  {
       propertyImage:this.TblPropertyModel.propertyImage,
       propertySize:this.TblPropertyModel.propertySize,
       propertylocation:this.TblPropertyModel.propertylocation,
+      propertyPrice:Number(this.TblPropertyModel.propertyPrice),
       discount:Number(this.TblPropertyModel.discount),
  }
  this.httpc.post("https://localhost:44393/api/Property",propertydto).subscribe(res=>this.PostSuccess(res),res=>this.PostError(res));

@@ -50,6 +50,7 @@ namespace RealEstate.ViewModels
             else if (db.TblLogins.Any(x => x.UserName == registerViewModel.UserName && x.Password == registerViewModel.Password))
             {
                 _isVender = db.TblLogins.Any(x => x.UserName == registerViewModel.UserName && x.Password == registerViewModel.Password && x.IsVender == 1);
+                _isAdmin = db.TblLogins.Any(x => x.UserName == registerViewModel.UserName && x.Password == registerViewModel.Password && x.IsAdmin == 1);
             }
             else
             {

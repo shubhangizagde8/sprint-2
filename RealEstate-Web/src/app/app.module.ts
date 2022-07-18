@@ -7,11 +7,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
-import { HomeComponent } from './userhome/home.component';
+import { HomeComponent } from './Account/home.component';
 import { AuthService } from './services/auth.service';
 import { PropertyComponent } from './property/property.component';
 import { OrderComponent } from './order/order.component';
 import { Home1Component } from './home1/home1.component';
+import { HouseregisterComponent } from './houseregister/houseregister.component';
+import { VenderComponent } from './vender/vender.component';
+import { AdminComponent } from './admin/admin.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +24,10 @@ import { Home1Component } from './home1/home1.component';
     HomeComponent,
     PropertyComponent,
     OrderComponent,
-    Home1Component
+    Home1Component,
+    HouseregisterComponent,
+    VenderComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,

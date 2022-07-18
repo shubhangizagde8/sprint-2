@@ -1,9 +1,19 @@
 
 
 <div class="container">
-    <p></p>
-    <p></p>
-    <p></p>
+       
+        <a  class="text-right buttons" routerLink="/home1" class="btn btn">Home</a>
+        <a  class="nav-link" routerLink="/houseregister" class="btn btn">Resister House</a>
+        <a  class="nav-link" routerLink="/#" class="btn btn">Contacts</a>
+<hr>
+<div class="col-md-13">
+    <div class="d-flex form-inputs">
+        <input class="form-control" type="text" placeholder="Search for location...">
+        <i class="bx bx-search"></i>
+    </div>
+</div>
+<hr>
+
     <div class="row">
         <ng-container *ngFor="let product of  property">
             <div class="card col-md-3">
@@ -12,7 +22,7 @@
                 <h6 style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">With size of {{product.propertySize}} sq/ft </h6>
                 <p style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">Description:-{{product.propertyDescription}}</p>
                 <p><strong>Price:</strong> ${{product.propertyPrice}}</p>
-                <p><strong>Price:</strong> ${{product.discount}}</p>
+                <p><strong>Discount :- </strong> At ${{product.discount}} %</p>
                 <img src="../../assets/icons/location.png" width="20"> <span class="guarantee">#{{product.propertylocation}}</span>
                 <a  class="nav-link" routerLink="/#" class="btn btn-primary">Bool Now...!</a>
             </div>
@@ -21,6 +31,6 @@
         
     </div>
 </div>
-<hr>
+
 
 

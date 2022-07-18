@@ -19,7 +19,7 @@ namespace RealEstate.Models
 
         public virtual DbSet<TblLogin> TblLogins { get; set; }
         public virtual DbSet<TblProperty> TblProperties { get; set; }
-        public virtual DbSet<TblPropertyUser> TblPropertyUsers { get; set; }
+        public virtual DbSet<TblVenderProperty> TblVenderProperties { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -94,9 +94,19 @@ namespace RealEstate.Models
                     .IsUnicode(false);
             });
 
-            modelBuilder.Entity<TblPropertyUser>(entity =>
+            modelBuilder.Entity<TblVenderProperty>(entity =>
             {
-                entity.ToTable("TblPropertyUser");
+                entity.ToTable("TblVenderProperty");
+
+                entity.HasIndex(e => e.Email, "UQ__TblVende__A9D10534380D226D")
+                    .IsUnique();
+
+                entity.HasIndex(e => e.UserName, "UQ__TblVende__C9F28456B5B937F0")
+                    .IsUnique();
+
+                entity.Property(e => e.Email)
+                    .HasMaxLength(200)
+                    .IsUnicode(false);
 
                 entity.Property(e => e.PropertyDescription)
                     .HasMaxLength(500)
@@ -118,6 +128,11 @@ namespace RealEstate.Models
                     .IsUnicode(false);
 
                 entity.Property(e => e.Propertylocation)
+                    .IsRequired()
+                    .HasMaxLength(200)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.UserName)
                     .IsRequired()
                     .HasMaxLength(200)
                     .IsUnicode(false);
