@@ -18,6 +18,7 @@ export class PropertyComponent  {
     console.log(this.TblPropertyModel);
     var propertydto={
       propertyName:this.TblPropertyModel.propertyName,
+      userName:this.TblPropertyModel.userName,
       propertyDescription:this.TblPropertyModel.propertyDescription,
       propertyImage:this.TblPropertyModel.propertyImage,
       propertySize:this.TblPropertyModel.propertySize,
