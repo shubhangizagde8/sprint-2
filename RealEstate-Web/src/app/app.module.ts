@@ -15,6 +15,8 @@ import { Home1Component } from './home1/home1.component';
 import { HouseregisterComponent } from './houseregister/houseregister.component';
 import { VenderComponent } from './vender/vender.component';
 import { AdminComponent } from './admin/admin.component';
+import { FilterPipe } from './shared/filter.pipe';
+import { SseeOrderComponent } from './ssee-order/ssee-order.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,9 @@ import { AdminComponent } from './admin/admin.component';
     Home1Component,
     HouseregisterComponent,
     VenderComponent,
-    AdminComponent
+    AdminComponent,
+    FilterPipe,
+    SseeOrderComponent
   ],
   imports: [
     BrowserModule,

@@ -20,6 +20,8 @@ namespace RealEstate.Controllers
             return db.TblOrders.ToList();
         }
 
+      
+
         [HttpPost]
         public string Post([FromBody] TblOrder order)
         {

@@ -26,7 +26,10 @@
           <a class="nav-link"  *ngIf="LoggedIn(true)" (click)="LogOut()" >Logout</a>
         </li>
 
-       
+        <div class="d-flex form-inputs">
+          <input class="form-control" type="text" [(ngModel)]="searchTerm" (keyup)="search($event)" placeholder="Search for location..."/>
+          <i class="bx bx-search"></i>
+      </div>
 
       </ul>
     </div>

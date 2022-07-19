@@ -14,6 +14,7 @@
                 <ng-container *ngFor="let product of  house">
                     <div class="card col-md-3">
                         <p><strong>House id :- </strong> {{product.id}} </p>
+                        <h6 style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">Vender Name:- {{product.userName}}</h6>
                         <img src="../../assets/{{product.propertyImage}}" alt="">
                         <h6 style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{product.propertyName}}</h6>
                         <h6 style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">With size of {{product.propertySize}} sq/ft </h6>

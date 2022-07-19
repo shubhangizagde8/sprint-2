@@ -48,11 +48,17 @@ export class OrderComponent {
     this.TblOrderModels.splice(index,1);
   }
 
+  getOrder1(){
+    
+    this.httpc.get("https://localhost:44393/api/Order")
+  }
 
   getOrder(){
     console.log("Hi");
     this.httpc.get("https://localhost:44393/api/Order").subscribe(res=>this.GetSuccess(res),res=>this.GetError(res));
   }
+
+
   GetSuccess(input:any){
     this.TblOrderModels=input;
   }

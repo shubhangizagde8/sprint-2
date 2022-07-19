@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { PropertyService } from '../services/property.services';
+
 
 @Component({
   selector: 'app-vender',
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VenderComponent implements OnInit {
 
-  constructor() { }
+  constructor(private _Propertyservice: PropertyService) { }
 
-  ngOnInit(): void {
+  public property : any ; 
+   ngOnInit(): void {
+
+    this._Propertyservice.getProperty().subscribe(res => this.property = res, err => console.log(err))
   }
 
 }
+
+
+
+
+

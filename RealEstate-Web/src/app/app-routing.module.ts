@@ -9,6 +9,7 @@ import { Home1Component } from './home1/home1.component';
 import { HouseregisterComponent } from './houseregister/houseregister.component';
 import { VenderComponent } from './vender/vender.component';
 import { AdminComponent } from './admin/admin.component';
+import { SseeOrderComponent } from './ssee-order/ssee-order.component';
 
 
 const routes: Routes = [
@@ -16,6 +17,10 @@ const routes: Routes = [
   {
     path: 'account',
     component: HomeComponent
+  },
+  {
+    path: 'see-order',
+    component: SseeOrderComponent
   },
   
   {

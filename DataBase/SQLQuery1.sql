@@ -58,6 +58,9 @@ select *from TblVenderProperty;
 
 
 
+
+
+
 drop table TblOrder;
 drop table  TblLogin;
 drop table  TblProperty;
