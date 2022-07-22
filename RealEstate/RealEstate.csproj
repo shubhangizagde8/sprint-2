@@ -2,6 +2,11 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UserSecretsId>574e0dd4-6fc9-450b-bf4f-235c6bd04220</UserSecretsId>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>C:\Users\DELL\Desktop\sprint 2\RealEstate\RealEstate.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>

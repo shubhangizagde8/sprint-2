@@ -55,6 +55,10 @@ select *from TblOrder;
 
 select *from TblVenderProperty;
 
+insert into TblVenderProperty values('shubhangi','s@gmail.com','raj-villa','near to pune','c1.jpg','40', 'mumbai', 345091, 20);
+
+insert into TblVenderProperty values('kalyani','s@gmail.com','rony-house','in gujarat','p2.jpg','50', 'someshvar', 345091, 20);
+insert into TblVenderProperty values('pragya','s@gmail.com','rajmahal','near to ambedkar library','p1..jpg','35', 'satara', 345091, 20);
 
 
 

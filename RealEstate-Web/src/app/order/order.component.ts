@@ -47,15 +47,20 @@ export class OrderComponent {
     var index=this.TblOrderModels.indexOf(input);
     this.TblOrderModels.splice(index,1);
   }
-
+  
   getOrder1(){
     
     this.httpc.get("https://localhost:44393/api/Order")
+//azure
+   // this.httpc.get("https://zagade123.azurewebsites.net/api/Order")
   }
 
   getOrder(){
     console.log("Hi");
     this.httpc.get("https://localhost:44393/api/Order").subscribe(res=>this.GetSuccess(res),res=>this.GetError(res));
+
+    //Azure
+ // this.httpc.get("https://zagade123.azurewebsites.net/api/Order").subscribe(res=>this.GetSuccess(res),res=>this.GetError(res));
   }
 
 

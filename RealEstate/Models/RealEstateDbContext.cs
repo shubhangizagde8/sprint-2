@@ -39,10 +39,10 @@ namespace RealEstate.Models
             {
                 entity.ToTable("TblLogin");
 
-                entity.HasIndex(e => e.Email, "UQ__TblLogin__A9D10534A64E5921")
+                entity.HasIndex(e => e.Email, "UQ__TblLogin__A9D10534006BAA74")
                     .IsUnique();
 
-                entity.HasIndex(e => e.UserName, "UQ__TblLogin__C9F28456C1D2ED48")
+                entity.HasIndex(e => e.UserName, "UQ__TblLogin__C9F284569A620987")
                     .IsUnique();
 
                 entity.Property(e => e.Email)
@@ -69,14 +69,11 @@ namespace RealEstate.Models
             modelBuilder.Entity<TblOrder>(entity =>
             {
                 entity.HasKey(e => e.OrderId)
-                    .HasName("PK__TblOrder__C3905BCF4E78F7E3");
+                    .HasName("PK__TblOrder__C3905BCF3FAD2B59");
 
                 entity.ToTable("TblOrder");
 
-                entity.HasIndex(e => e.Email, "UQ__TblOrder__A9D105347C747A92")
-                    .IsUnique();
-
-                entity.HasIndex(e => e.UserName, "UQ__TblOrder__C9F28456918B6DE5")
+                entity.HasIndex(e => e.Email, "UQ__TblOrder__A9D105347F2B0721")
                     .IsUnique();
 
                 entity.Property(e => e.Address)
@@ -108,9 +105,6 @@ namespace RealEstate.Models
             modelBuilder.Entity<TblProperty>(entity =>
             {
                 entity.ToTable("TblProperty");
-
-                entity.HasIndex(e => e.UserName, "UQ__TblPrope__C9F284568929604E")
-                    .IsUnique();
 
                 entity.Property(e => e.PropertyDescription)
                     .HasMaxLength(500)
@@ -146,10 +140,7 @@ namespace RealEstate.Models
             {
                 entity.ToTable("TblVenderProperty");
 
-                entity.HasIndex(e => e.Email, "UQ__TblVende__A9D10534380D226D")
-                    .IsUnique();
-
-                entity.HasIndex(e => e.UserName, "UQ__TblVende__C9F28456B5B937F0")
+                entity.HasIndex(e => e.Email, "UQ__TblVende__A9D105347F93AE32")
                     .IsUnique();
 
                 entity.Property(e => e.Email)

@@ -48,8 +48,8 @@
             <input [(ngModel)]="TblPropertyModel.discount" type="text">
         </td>
     </tr>
-     <input type="button" (click)="getData()" value="getData"/>
-    <input type="submit" (click)="AddProperty()">
+   <!--  <input type="button" (click)="getData()" value="Check Requets"/> -->
+    <input type="submit" (click)="AddProperty()" value="Approve">
     
 </table>
 
@@ -65,7 +65,7 @@
         <td>Discount</td>
         <td>Actions</td>
     </tr>
-    <tr *ngFor="let item of TblPropertyModels">
+    <tr *ngFor="let item of  house">
         <td>
             {{item.propertyName}}
         </td>
@@ -86,9 +86,8 @@
         </td>
         
         <td>
-            <input type="button" value="Edit" (click)="EditCustomer(item)" />
-            <input type="button" value="Delete" (click)="DeleteProperty(item)" />
-            
+            <input type="button" value="Add" (click)="EditCustomer(item)" />
+           
         </td>
     </tr>
 </table>

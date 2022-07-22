@@ -4,8 +4,13 @@ import { Router } from '@angular/router';
 
 @Injectable()
 export class AuthService {
+
   private _registerUrl = "https://localhost:44393/api/Login/register";
   private _loginUrl = "https://localhost:44393/api/Login/login";
+
+//Azure
+ //private _registerUrl = "https://zagade123.azurewebsites.net/api/Login/register";
+ //private _loginUrl = "https://zagade123.azurewebsites.net/api/Login/login";
 
   constructor(private http: HttpClient,private _router:Router) { }
 

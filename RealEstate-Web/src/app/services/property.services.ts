@@ -9,10 +9,13 @@ import { BehaviorSubject } from 'rxjs';
 export class PropertyService {
   public search=new BehaviorSubject<string>("");
   private productUrl = "https://localhost:44393/api/Property";
-  constructor(private http: HttpClient,private _router:Router) { }
 
+  //Azure
+ // private productUrl = "https://zagade123.azurewebsites.net/api/Property";
   
-  getProperty() {
+
+  constructor(private http: HttpClient,private _router:Router) { }
+ getProperty() {
     return this.http.get<any>(this.productUrl);
   }
 

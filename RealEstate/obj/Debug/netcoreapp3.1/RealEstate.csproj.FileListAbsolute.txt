@@ -6,6 +6,7 @@ C:\Users\DELL\Desktop\sprint 2\RealEstate\bin\Debug\netcoreapp3.1\RealEstate.run
 C:\Users\DELL\Desktop\sprint 2\RealEstate\bin\Debug\netcoreapp3.1\RealEstate.runtimeconfig.dev.json
 C:\Users\DELL\Desktop\sprint 2\RealEstate\bin\Debug\netcoreapp3.1\RealEstate.dll
 C:\Users\DELL\Desktop\sprint 2\RealEstate\bin\Debug\netcoreapp3.1\RealEstate.pdb
+C:\Users\DELL\Desktop\sprint 2\RealEstate\bin\Debug\netcoreapp3.1\RealEstate.xml
 C:\Users\DELL\Desktop\sprint 2\RealEstate\bin\Debug\netcoreapp3.1\Humanizer.dll
 C:\Users\DELL\Desktop\sprint 2\RealEstate\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\DELL\Desktop\sprint 2\RealEstate\bin\Debug\netcoreapp3.1\Microsoft.Data.SqlClient.dll
@@ -67,4 +68,3 @@ C:\Users\DELL\Desktop\sprint 2\RealEstate\obj\Debug\netcoreapp3.1\RealEstate.csp
 C:\Users\DELL\Desktop\sprint 2\RealEstate\obj\Debug\netcoreapp3.1\RealEstate.dll
 C:\Users\DELL\Desktop\sprint 2\RealEstate\obj\Debug\netcoreapp3.1\RealEstate.pdb
 C:\Users\DELL\Desktop\sprint 2\RealEstate\obj\Debug\netcoreapp3.1\RealEstate.genruntimeconfig.cache
-C:\Users\DELL\Desktop\sprint 2\RealEstate\obj\Debug\netcoreapp3.1\RealEstate.csproj.AssemblyReference.cache
