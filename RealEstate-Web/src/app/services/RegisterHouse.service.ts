@@ -6,10 +6,10 @@ import { Router } from '@angular/router';
   providedIn: 'root'
 })
 export class RegisterHouseService {
- // private _productUrl = "https://localhost:44393/api/RegisterHouse";
+  private _productUrl = "https://localhost:44344/api/RegisterHouse";
 
   //Azure
-  private _productUrl = "https://zagade123.azurewebsites.net/api/RegisterHouse";
+  //private _productUrl = "https://zagade123.azurewebsites.net/api/RegisterHouse";
 
 
   constructor(private http: HttpClient,private _router:Router) { }

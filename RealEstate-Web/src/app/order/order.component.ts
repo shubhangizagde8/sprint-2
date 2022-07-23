@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { TblOrder } from '../models/OrderData';
 import { HttpClient } from '@angular/common/http';
+import { CartService } from '../services/cart.services';
+
 
 
 @Component({
@@ -8,9 +10,9 @@ import { HttpClient } from '@angular/common/http';
   templateUrl: './order.component.html',
   
 })
-export class OrderComponent { 
+export class OrderComponent implements OnInit { 
 
-  constructor(public httpc:HttpClient) { }
+  constructor(public httpc:HttpClient,private cartService : CartService) { }
 
   TblOrderModel: TblOrder = new TblOrder();
   TblOrderModels: Array<TblOrder> = new Array<TblOrder>();
@@ -27,7 +29,7 @@ export class OrderComponent {
       address:this.TblOrderModel.address,
       housePrice:Number(this.TblOrderModel.housePrice),     
  }
- this.httpc.post("https://localhost:44393/api/Order",Orderdto).subscribe(res=>this.PostSuccess(res),res=>this.PostError(res));
+ this.httpc.post("https://localhost:44344/api/Order",Orderdto).subscribe(res=>this.PostSuccess(res),res=>this.PostError(res));
  this.TblOrderModel = new TblOrder();
 
   }
@@ -48,16 +50,12 @@ export class OrderComponent {
     this.TblOrderModels.splice(index,1);
   }
   
-  getOrder1(){
-    
-    this.httpc.get("https://localhost:44393/api/Order")
-//azure
-   // this.httpc.get("https://zagade123.azurewebsites.net/api/Order")
-  }
+  
+
 
   getOrder(){
     console.log("Hi");
-    this.httpc.get("https://localhost:44393/api/Order").subscribe(res=>this.GetSuccess(res),res=>this.GetError(res));
+    this.httpc.get("https://localhost:44344/api/Order").subscribe(res=>this.GetSuccess(res),res=>this.GetError(res));
 
     //Azure
  // this.httpc.get("https://zagade123.azurewebsites.net/api/Order").subscribe(res=>this.GetSuccess(res),res=>this.GetError(res));
@@ -70,5 +68,15 @@ export class OrderComponent {
   GetError(input:any){
     console.log(input);
   }
+
+
+  public products : any = [];
+  ngOnInit(): void {
+    this.cartService.getProducts()
+    .subscribe(res=>{
+      this.products = res;
+    })
+  }
+ 
 
 }

@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
 })
 export class OrderService {
   
- private _productUrl = "https://localhost:44393/api/Order";
+ private _productUrl = "https://localhost:44344/api/Order";
 
   //Azure
   //private _productUrl = "https://zagade123.azurewebsites.net/api/Order";

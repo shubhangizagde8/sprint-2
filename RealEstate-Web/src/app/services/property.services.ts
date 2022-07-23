@@ -1,4 +1,6 @@
 import { HttpClient } from '@angular/common/http';
+
+
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { BehaviorSubject } from 'rxjs';
@@ -7,8 +9,10 @@ import { BehaviorSubject } from 'rxjs';
   providedIn: 'root'
 })
 export class PropertyService {
+
+  
   public search=new BehaviorSubject<string>("");
-  private productUrl = "https://localhost:44393/api/Property";
+  private productUrl = "https://localhost:44344/api/Property";
 
   //Azure
  // private productUrl = "https://zagade123.azurewebsites.net/api/Property";

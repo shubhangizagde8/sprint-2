@@ -28,7 +28,7 @@ export class PropertyComponent implements OnInit {
       propertyPrice:Number(this.TblPropertyModel.propertyPrice),
       discount:Number(this.TblPropertyModel.discount),
  }
-this.httpc.post("https://localhost:44393/api/Property",propertydto).subscribe(res=>this.PostSuccess(res),res=>this.PostError(res));
+this.httpc.post("https://localhost:44344/api/Property",propertydto).subscribe(res=>this.PostSuccess(res),res=>this.PostError(res));
 
 //Azure
 
@@ -44,7 +44,7 @@ PostError(res:any){
   console.log(res);
 }
 
-EditCustomer(input: TblProperty) {
+Add(input: TblProperty) {
   this.TblPropertyModel = input;
 }
 
@@ -54,10 +54,10 @@ DeleteProperty(input: TblProperty) {
 }
 getData(){
   console.log("Hi");
-  //this.httpc.get("https://localhost:44393/api/Property").subscribe(res=>this.GetSuccess(res),res=>this.GetError(res));
+  this.httpc.get("https://localhost:44344/api/Property").subscribe(res=>this.GetSuccess(res),res=>this.GetError(res));
 
  //Azure
- this.httpc.get("https://zagade123.azurewebsites.net/api/Property").subscribe(res=>this.GetSuccess(res),res=>this.GetError(res));
+// this.httpc.get("https://zagade123.azurewebsites.net/api/Property").subscribe(res=>this.GetSuccess(res),res=>this.GetError(res));
 }
 GetSuccess(input:any){
   this.TblPropertyModels=input;

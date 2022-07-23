@@ -29,7 +29,7 @@ export class HouseregisterComponent {
         discount:Number(this.TblVenderPropertyModel.discount),
        
    }
-   this.httpc.post("https://localhost:44393/api/RegisterHouse",housedto).subscribe(res=>this.PostSuccess(res),res=>this.PostError(res));
+   this.httpc.post("https://localhost:44344/api/RegisterHouse",housedto).subscribe(res=>this.PostSuccess(res),res=>this.PostError(res));
    //AZaure
    //this.httpc.post("https://localhost:44393/api/RegisterHouse",housedto).subscribe(res=>this.PostSuccess(res),res=>this.PostError(res));
    this.TblVenderPropertyModel = new TblVenderProperty();
@@ -48,7 +48,7 @@ export class HouseregisterComponent {
   }
   getHouse(){
     console.log("Hi");
-    this.httpc.get("https://localhost:44393/api/RegisterHouse").subscribe(res=>this.GetSuccess(res),res=>this.GetError(res));
+    this.httpc.get("https://localhost:44344/api/RegisterHouse").subscribe(res=>this.GetSuccess(res),res=>this.GetError(res));
     //Azure
 
   //this.httpc.get("https://zagade123.azurewebsites.net/api/RegisterHouse").subscribe(res=>this.GetSuccess(res),res=>this.GetError(res));

@@ -17,6 +17,7 @@ import { VenderComponent } from './vender/vender.component';
 import { AdminComponent } from './admin/admin.component';
 import { FilterPipe } from './shared/filter.pipe';
 import { SseeOrderComponent } from './ssee-order/ssee-order.component';
+import { CartComponent } from './cart/cart.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { SseeOrderComponent } from './ssee-order/ssee-order.component';
     VenderComponent,
     AdminComponent,
     FilterPipe,
-    SseeOrderComponent
+    SseeOrderComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,

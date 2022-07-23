@@ -24,3 +24,6 @@ namespace RealEstate
                 });
     }
 }
+
+
+//Data Source=DESKTOP-S0BV6A2;Initial Catalog=RealEstateDb;Integrated Security=True

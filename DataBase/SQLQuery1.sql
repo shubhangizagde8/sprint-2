@@ -12,11 +12,11 @@
 
 select *from TblLogin;
 
-insert into TblLogin values('admin1','admin1@gmail.com','123',978584239,1,0);
+insert into TblLogin values('admin1','admin1@gmail.com','123',978584239,0,0);
 
 
 create table TblProperty(Id int primary key identity(1,1),
-                        UserName varchar(200) unique not null,
+                        UserName varchar(200)  not null,
                        PropertyName varchar(200)  not null,
 					   PropertyDescription varchar(500),
 					   PropertyImage varchar(100) not null,
@@ -27,7 +27,7 @@ create table TblProperty(Id int primary key identity(1,1),
 
 
 create table TblVenderProperty(Id int primary key identity(1,1),
-                       UserName varchar(200) unique not null,
+                       UserName varchar(200)  not null,
 					   Email varchar(200) unique,
                        PropertyName varchar(200)  not null,
 					   PropertyDescription varchar(500),
@@ -41,7 +41,7 @@ create table TblVenderProperty(Id int primary key identity(1,1),
 create table TblOrder(
                       OrderId int primary key identity(1,1),
                       FullName varchar(200),
-					  UserName varchar(200) unique,
+					  UserName varchar(200) ,
 					  PropertyImage varchar(100) not null,
 					  VenderName varchar(200),
 					  Email varchar(200) Unique,
@@ -62,11 +62,13 @@ insert into TblVenderProperty values('pragya','s@gmail.com','rajmahal','near to 
 
 
 
-
+drop table  TblLogin;
 
 
 drop table TblOrder;
-drop table  TblLogin;
+drop table TblVenderProperty;
 drop table  TblProperty;
+
+
 truncate table TblProperty;
 truncate table TblVenderProperty;
